@@ -20,16 +20,17 @@ Route::get('/usuario/{id}', function( $id ) {
     return "nombre {$nombre} datos del usuario {$id}";
 } );
 
-// Route::get('/nacimiento/{anyo}/{mes}', function($anyo, $mes){
-// $year=2019;
-// return $year-$anyo;
-
-// });
-
 Route::get('/nacimiento/{anyo}/{mes}', function($anyo, $mes){
+$year=2019;
+return $year-$anyo;
+
+});
+
+// Route::get('/nacimiento/{anyo}/{mes}', function($anyo, $mes){
     
-    $fecha = getdate() ;
-    $anyoActual = $fecha{"year"} ;
-    return response()->json( ["year" => $anyoActual] );
+//     $fecha = getdate() ;
+//     $anyoActual = $fecha{"year"} ;
+//     return response()->json( ["year" => $anyoActual] );
     
-    });
+//     });
+
